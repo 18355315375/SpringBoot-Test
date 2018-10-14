@@ -1,0 +1,12 @@
+
+*.class
+*.pyc
+/.metadata/
+/.recommenders/
+
+# Intellij
+.idea/
+*.iml
+
+# Cucumber Testing artifacts
+cucumber-report
