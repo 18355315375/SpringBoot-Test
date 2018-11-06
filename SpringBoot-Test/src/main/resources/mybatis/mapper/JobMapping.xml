@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.neo.mapper.JobMapper" >
-<resultMap id="BaseResultMap" type="com.neo.entity.Job" >
+<mapper namespace="com.tcmap.mapper.JobMapper" >
+<resultMap id="BaseResultMap" type="com.tcmap.entity.Job" >
         <id column="id" property="id"/>
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="remark" property="remark" jdbcType="VARCHAR" />
@@ -9,4 +9,10 @@
     <select id="getJobs" resultMap="BaseResultMap">
       select * from job;
     </select>
+    <insert id="addJobs" parameterType="java.util.List">
+      insert job (name,remark) values
+      <foreach collection="list" item="item" index="index" separator=",">
+         (#{item.name,jdbcType=VARCHAR},#{item.remark,jdbcType=VARCHAR})
+      </foreach>
+    </insert>
 </mapper>

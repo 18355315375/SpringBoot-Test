@@ -1,0 +1,9 @@
+com\boot\mgservies\UserServies.class
+com\boot\TestApplication.class
+com\boot\controller\TestController.class
+com\boot\mgdao\UserDao.class
+com\boot\mgservies\impl\UserServiesImpl.class
+com\neo\entity\User.class
+com\boot\mgdao\impl\UserDaoImpl.class
+com\neo\entity\Job.class
+com\neo\mapper\JobMapper.class
